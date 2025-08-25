@@ -1,0 +1,35 @@
+# Python 캐시 파일
+__pycache__/
+*.py[cod]
+*$py.class
+
+# 가상환경
+venv/
+.venv/
+
+# 환경변수
+.env
+
+# 패키지 빌드 결과
+build/
+dist/
+*.egg-info/
+
+# IDE 설정
+.vscode/
+.idea/
+
+# OS 생성 파일  
+.DS_Store
+Thumbs.db
+
+# 로그 파일
+*.log
+
+# 임시 파일
+*.tmp
+temp/
+
+
+.claude/
+.mcp.json

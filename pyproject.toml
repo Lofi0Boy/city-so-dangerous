@@ -1,0 +1,60 @@
+[build-system]
+requires = ["setuptools>=45", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "city-so-dangerous"
+version = "0.1.0"
+description = "위험 상황 이미지 분석 패키지"
+readme = "README.md"
+requires-python = ">=3.8"
+license = {file = "LICENSE"}
+authors = [
+    {name = "City So Dangerous Team"}
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers", 
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+]
+dependencies = [
+    "langchain-google-genai>=2.1.9",
+    "langgraph>=0.6.6",
+    "pillow>=11.3.0",
+    "python-dotenv",
+    "pydantic>=2.0"
+]
+
+[project.optional-dependencies]
+dev = ["pytest", "black", "flake8", "mypy"]
+test = ["pytest", "pytest-cov"]
+
+[project.urls]
+Homepage = "https://github.com/yourusername/city-so-dangerous"
+Repository = "https://github.com/yourusername/city-so-dangerous.git"
+Issues = "https://github.com/yourusername/city-so-dangerous/issues"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["city_so_dangerous*"]
+
+# 툴 설정
+[tool.black]
+line-length = 88
+target-version = ['py38']
+
+[tool.isort]
+profile = "black"
+line_length = 88
+
+[tool.mypy]
+python_version = "3.8"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
